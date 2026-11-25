@@ -1,0 +1,318 @@
+{
+  "catalog_version": "1.0.0",
+  "checked_date": "2026-11-25",
+  "components": [
+    {
+      "id": "apache-nuttx",
+      "name": "Apache NuttX",
+      "category": "rtos",
+      "repository": "https://github.com/apache/nuttx",
+      "status": "catalog-only",
+      "license": "Apache-2.0 or compatible; verify individual files",
+      "license_basis": "upstream repository README",
+      "best_for": [
+        "POSIX-like RTOS",
+        "device drivers",
+        "filesystem",
+        "networking"
+      ],
+      "integration": "platform, not a drop-in library",
+      "version_pin": "",
+      "notes": "NuttX Apps is a separate repository. Check target version, defconfig and Kconfig."
+    },
+    {
+      "id": "nuttx-apps",
+      "name": "NuttX Apps",
+      "category": "applications-and-examples",
+      "repository": "https://github.com/apache/nuttx-apps",
+      "status": "catalog-only",
+      "license": "review per application and bundled third-party content",
+      "license_basis": "must inspect selected tree",
+      "best_for": [
+        "NuttX application patterns",
+        "system examples",
+        "shell tools"
+      ],
+      "integration": "copy/adapt a specific app only after source and license review",
+      "version_pin": "",
+      "notes": "Keep the apps checkout compatible with the selected NuttX release."
+    },
+    {
+      "id": "zephyr",
+      "name": "Zephyr RTOS",
+      "category": "rtos",
+      "repository": "https://github.com/zephyrproject-rtos/zephyr",
+      "status": "catalog-only",
+      "license": "Apache-2.0 (repository metadata; check files and modules)",
+      "license_basis": "GitHub repository metadata",
+      "best_for": [
+        "device model",
+        "devicetree",
+        "work queue",
+        "subsystems"
+      ],
+      "integration": "architectural reference or target platform",
+      "version_pin": "",
+      "notes": "The repo uses a west manifest and external modules; audit the complete module set."
+    },
+    {
+      "id": "freertos-kernel",
+      "name": "FreeRTOS Kernel",
+      "category": "rtos",
+      "repository": "https://github.com/FreeRTOS/FreeRTOS-Kernel",
+      "status": "catalog-only",
+      "license": "MIT",
+      "license_basis": "official FreeRTOS licensing documentation",
+      "best_for": [
+        "task scheduling",
+        "queues",
+        "semaphores",
+        "timers"
+      ],
+      "integration": "fixed-version submodule or vendor dependency",
+      "version_pin": "",
+      "notes": "Demo and distribution repositories can include third-party files under separate terms."
+    },
+    {
+      "id": "rt-thread",
+      "name": "RT-Thread",
+      "category": "rtos",
+      "repository": "https://github.com/RT-Thread/rt-thread",
+      "status": "catalog-only",
+      "license": "Apache-2.0; vendor BSP code may differ",
+      "license_basis": "upstream README/documentation",
+      "best_for": [
+        "component framework",
+        "device model",
+        "FinSH",
+        "BSP organization"
+      ],
+      "integration": "platform or architecture reference",
+      "version_pin": "",
+      "notes": "Review chip-vendor BSP and package licenses separately."
+    },
+    {
+      "id": "cmsis",
+      "name": "CMSIS",
+      "category": "arm-platform",
+      "repository": "https://github.com/ARM-software/CMSIS_5",
+      "status": "catalog-only",
+      "license": "Apache-2.0 (Arm CMSIS documentation)",
+      "license_basis": "Arm CMSIS documentation",
+      "best_for": [
+        "Cortex interfaces",
+        "CMSIS-DSP",
+        "CMSIS-RTOS2",
+        "device packs"
+      ],
+      "integration": "Arm-specific platform dependency",
+      "version_pin": "",
+      "notes": "Use the current CMSIS generation and repository relevant to the target; this entry is an initial discovery pointer."
+    },
+    {
+      "id": "libopencm3",
+      "name": "libopencm3",
+      "category": "hal-and-drivers",
+      "repository": "https://github.com/libopencm3/libopencm3",
+      "status": "catalog-only",
+      "license": "LGPL-3.0-or-later (upstream README); verify distribution obligations",
+      "license_basis": "upstream README",
+      "best_for": [
+        "Cortex-M peripheral library",
+        "bare-metal firmware"
+      ],
+      "integration": "evaluate license and target coverage before product use",
+      "version_pin": "",
+      "notes": "Examples and template repositories are separate projects; audit their own content."
+    },
+    {
+      "id": "libopencm3-template",
+      "name": "libopencm3 Template",
+      "category": "project-template",
+      "repository": "https://github.com/libopencm3/libopencm3-template",
+      "status": "catalog-only",
+      "license": "verify template and submodule licenses",
+      "license_basis": "not asserted",
+      "best_for": [
+        "Makefile template",
+        "separating application and common code"
+      ],
+      "integration": "copy structure after review",
+      "version_pin": "",
+      "notes": "Template uses libopencm3 as a submodule."
+    },
+    {
+      "id": "platformio-examples",
+      "name": "PlatformIO Examples",
+      "category": "project-template",
+      "repository": "https://github.com/platformio/platformio-examples",
+      "status": "catalog-only",
+      "license": "Apache-2.0 repository metadata; examples may carry additional terms",
+      "license_basis": "GitHub repository metadata",
+      "best_for": [
+        "multi-platform build examples",
+        "framework configuration"
+      ],
+      "integration": "study individual example only",
+      "version_pin": "",
+      "notes": "Do not assume all vendor SDKs referenced by examples share the repository license."
+    },
+    {
+      "id": "tinyusb",
+      "name": "TinyUSB",
+      "category": "usb",
+      "repository": "https://github.com/hathach/tinyusb",
+      "status": "catalog-only",
+      "license": "MIT",
+      "license_basis": "upstream LICENSE",
+      "best_for": [
+        "USB device",
+        "USB host",
+        "CDC",
+        "HID",
+        "MSC"
+      ],
+      "integration": "fixed-version dependency plus MCU USB controller DCD/HCD port",
+      "version_pin": "",
+      "notes": "Check controller support, task/interrupt context, endpoint and buffer constraints."
+    },
+    {
+      "id": "lwip",
+      "name": "lwIP",
+      "category": "networking",
+      "repository": "https://github.com/lwip-tcpip/lwip",
+      "status": "catalog-only",
+      "license": "BSD-style; verify exact selected release and contrib files",
+      "license_basis": "upstream README says BSD license",
+      "best_for": [
+        "TCP/IP",
+        "UDP",
+        "DHCP",
+        "DNS",
+        "MQTT-related examples"
+      ],
+      "integration": "porting layer plus netif and OS abstraction",
+      "version_pin": "",
+      "notes": "Check threading mode, memory pools, socket configuration and vendor patches."
+    },
+    {
+      "id": "nanopb",
+      "name": "Nanopb",
+      "category": "serialization",
+      "repository": "https://github.com/nanopb/nanopb",
+      "status": "catalog-only",
+      "license": "verify selected release LICENSE and generated-code terms",
+      "license_basis": "not asserted in this catalog",
+      "best_for": [
+        "Protocol Buffers in C",
+        "bounded message serialization"
+      ],
+      "integration": "generator/tooling plus embedded runtime",
+      "version_pin": "",
+      "notes": "Pin protoc/plugin/runtime versions together; define maximum message size and schema evolution policy."
+    },
+    {
+      "id": "littlefs",
+      "name": "littlefs",
+      "category": "filesystem",
+      "repository": "https://github.com/littlefs-project/littlefs",
+      "status": "catalog-only",
+      "license": "BSD-3-Clause",
+      "license_basis": "upstream repository metadata and LICENSE.md",
+      "best_for": [
+        "Flash filesystem",
+        "power-loss resilience",
+        "wear management"
+      ],
+      "integration": "block-device adapter plus configuration and geometry validation",
+      "version_pin": "",
+      "notes": "Test power interruption, erase/program constraints and wear behavior on target flash."
+    },
+    {
+      "id": "mcuboot",
+      "name": "MCUboot",
+      "category": "boot-and-update",
+      "repository": "https://github.com/mcu-tools/mcuboot",
+      "status": "catalog-only",
+      "license": "Apache-2.0",
+      "license_basis": "upstream LICENSE",
+      "best_for": [
+        "secure boot",
+        "firmware image validation",
+        "boot swap and update"
+      ],
+      "integration": "bootloader port plus flash layout and signing pipeline",
+      "version_pin": "",
+      "notes": "Security architecture, key management, rollback and flash layout require product review."
+    },
+    {
+      "id": "lvgl",
+      "name": "LVGL",
+      "category": "ui",
+      "repository": "https://github.com/lvgl/lvgl",
+      "status": "catalog-only",
+      "license": "MIT for LVGL core; LVGL Pro is separately licensed",
+      "license_basis": "upstream README and LICENCE.txt",
+      "best_for": [
+        "embedded UI",
+        "widgets",
+        "events",
+        "display rendering"
+      ],
+      "integration": "fixed-version library with display/input/OS integration",
+      "version_pin": "",
+      "notes": "Do not conflate LVGL core with commercial LVGL Pro tools/services."
+    },
+    {
+      "id": "etl",
+      "name": "Embedded Template Library",
+      "category": "cpp-utilities",
+      "repository": "https://github.com/ETLCPP/etl",
+      "status": "catalog-only",
+      "license": "MIT",
+      "license_basis": "upstream repository metadata and README",
+      "best_for": [
+        "fixed-capacity containers",
+        "embedded C++",
+        "no dynamic allocation"
+      ],
+      "integration": "header-only dependency after C++ standard and configuration review",
+      "version_pin": "",
+      "notes": "Validate actual container capacity and exception/compiler settings."
+    },
+    {
+      "id": "unity",
+      "name": "Unity Test Framework",
+      "category": "testing",
+      "repository": "https://github.com/ThrowTheSwitch/Unity",
+      "status": "catalog-only",
+      "license": "MIT",
+      "license_basis": "upstream LICENSE.txt",
+      "best_for": [
+        "C unit tests",
+        "assertions",
+        "embedded test targets"
+      ],
+      "integration": "host or target test dependency",
+      "version_pin": "",
+      "notes": "Select test runner and target integration based on toolchain."
+    },
+    {
+      "id": "ceedling",
+      "name": "Ceedling",
+      "category": "testing",
+      "repository": "https://github.com/ThrowTheSwitch/Ceedling",
+      "status": "catalog-only",
+      "license": "MIT (repository metadata)",
+      "license_basis": "GitHub repository metadata",
+      "best_for": [
+        "C test build",
+        "Unity integration",
+        "mock workflow"
+      ],
+      "integration": "developer/CI host tool",
+      "version_pin": "",
+      "notes": "Requires a Ruby toolchain; pin Ruby gems and compiler versions in CI."
+    }
+  ]
+}

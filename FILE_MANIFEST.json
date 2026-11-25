@@ -1,0 +1,250 @@
+{
+  "library": "Embedded-Code-Library",
+  "version": "1.0.0",
+  "files": [
+    {
+      "path": ".gitignore",
+      "size_bytes": 113
+    },
+    {
+      "path": "CATALOG.md",
+      "size_bytes": 5231
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size_bytes": 523
+    },
+    {
+      "path": "CMakeLists.txt",
+      "size_bytes": 747
+    },
+    {
+      "path": "LICENSE_POLICY.md",
+      "size_bytes": 1402
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 6515
+    },
+    {
+      "path": "catalog/SOURCES.md",
+      "size_bytes": 2121
+    },
+    {
+      "path": "catalog/components.json",
+      "size_bytes": 10989
+    },
+    {
+      "path": "components/README.md",
+      "size_bytes": 360
+    },
+    {
+      "path": "components/common/include/ecl_status.h",
+      "size_bytes": 434
+    },
+    {
+      "path": "components/ring_buffer/CMakeLists.txt",
+      "size_bytes": 405
+    },
+    {
+      "path": "components/ring_buffer/README.md",
+      "size_bytes": 1606
+    },
+    {
+      "path": "components/ring_buffer/component.json",
+      "size_bytes": 748
+    },
+    {
+      "path": "components/ring_buffer/include/ecl_ring_buffer.h",
+      "size_bytes": 2274
+    },
+    {
+      "path": "components/ring_buffer/src/ecl_ring_buffer.c",
+      "size_bytes": 3885
+    },
+    {
+      "path": "components/ring_buffer/tests/test_ring_buffer.c",
+      "size_bytes": 3291
+    },
+    {
+      "path": "docs/ARCHITECTURE.md",
+      "size_bytes": 1519
+    },
+    {
+      "path": "docs/COMPONENT_CONTRACT.md",
+      "size_bytes": 1438
+    },
+    {
+      "path": "docs/CONTRIBUTING.md",
+      "size_bytes": 689
+    },
+    {
+      "path": "docs/FACTORY_FRAMEWORK_MAPPING.md",
+      "size_bytes": 2069
+    },
+    {
+      "path": "docs/PORTABILITY_MATRIX.md",
+      "size_bytes": 951
+    },
+    {
+      "path": "docs/THIRD_PARTY_INTEGRATION.md",
+      "size_bytes": 1294
+    },
+    {
+      "path": "docs/VERSIONING_AND_RELEASE.md",
+      "size_bytes": 695
+    },
+    {
+      "path": "examples/ring_buffer_demo.c",
+      "size_bytes": 687
+    },
+    {
+      "path": "knowledge/README.md",
+      "size_bytes": 613
+    },
+    {
+      "path": "knowledge/references/nuttx_api.md",
+      "size_bytes": 48538
+    },
+    {
+      "path": "knowledge/skills/embedded-c-engineering/CHANGELOG.md",
+      "size_bytes": 485
+    },
+    {
+      "path": "knowledge/skills/embedded-c-engineering/README.md",
+      "size_bytes": 2353
+    },
+    {
+      "path": "knowledge/skills/embedded-c-engineering/SKILL.md",
+      "size_bytes": 6892
+    },
+    {
+      "path": "knowledge/skills/posix-system-programming/README.md",
+      "size_bytes": 1163
+    },
+    {
+      "path": "knowledge/skills/posix-system-programming/SKILL.md",
+      "size_bytes": 20574
+    },
+    {
+      "path": "knowledge/skills/posix-system-programming/references/coding_standard.md",
+      "size_bytes": 247698
+    },
+    {
+      "path": "knowledge/skills/posix-system-programming/references/loop_branch_techniques.md",
+      "size_bytes": 13564
+    },
+    {
+      "path": "knowledge/skills/posix-system-programming/references/nuttx_api.md",
+      "size_bytes": 48538
+    },
+    {
+      "path": "knowledge/skills/posix-system-programming/references/struct_union_techniques.md",
+      "size_bytes": 19363
+    },
+    {
+      "path": "templates/COMPONENT_METADATA_TEMPLATE.json",
+      "size_bytes": 365
+    },
+    {
+      "path": "templates/PORTABILITY_RECORD_TEMPLATE.md",
+      "size_bytes": 347
+    },
+    {
+      "path": "templates/c-component-template/CMakeLists.txt",
+      "size_bytes": 194
+    },
+    {
+      "path": "templates/c-component-template/README.md",
+      "size_bytes": 494
+    },
+    {
+      "path": "templates/c-component-template/component.json",
+      "size_bytes": 366
+    },
+    {
+      "path": "templates/c-component-template/include/ecl_component.h",
+      "size_bytes": 178
+    },
+    {
+      "path": "templates/c-component-template/src/ecl_component.c",
+      "size_bytes": 75
+    },
+    {
+      "path": "templates/c-component-template/tests/test_component.c",
+      "size_bytes": 120
+    },
+    {
+      "path": "templates/firmware-app-template/CMakeLists.txt",
+      "size_bytes": 264
+    },
+    {
+      "path": "templates/firmware-app-template/README.md",
+      "size_bytes": 367
+    },
+    {
+      "path": "templates/firmware-app-template/include/app.h",
+      "size_bytes": 116
+    },
+    {
+      "path": "templates/firmware-app-template/src/app.c",
+      "size_bytes": 182
+    },
+    {
+      "path": "templates/firmware-app-template/src/main.c",
+      "size_bytes": 215
+    },
+    {
+      "path": "templates/host-cmake-test-template/CMakeLists.txt",
+      "size_bytes": 430
+    },
+    {
+      "path": "templates/host-cmake-test-template/README.md",
+      "size_bytes": 214
+    },
+    {
+      "path": "templates/host-cmake-test-template/include/component.h",
+      "size_bytes": 94
+    },
+    {
+      "path": "templates/host-cmake-test-template/src/component.c",
+      "size_bytes": 140
+    },
+    {
+      "path": "templates/host-cmake-test-template/tests/test_component.c",
+      "size_bytes": 214
+    },
+    {
+      "path": "templates/nuttx-app-template/Kconfig",
+      "size_bytes": 240
+    },
+    {
+      "path": "templates/nuttx-app-template/Makefile",
+      "size_bytes": 260
+    },
+    {
+      "path": "templates/nuttx-app-template/README.md",
+      "size_bytes": 550
+    },
+    {
+      "path": "templates/nuttx-app-template/ecl_hello_main.c",
+      "size_bytes": 170
+    },
+    {
+      "path": "third_party/README.md",
+      "size_bytes": 641
+    },
+    {
+      "path": "third_party/notices/README.md",
+      "size_bytes": 174
+    },
+    {
+      "path": "tools/new_component.py",
+      "size_bytes": 1915
+    },
+    {
+      "path": "tools/validate_library.py",
+      "size_bytes": 2723
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+config EXAMPLES_ECL_HELLO
+    bool "Embedded Code Library hello application"
+    default n
+    ---help---
+        Minimal application skeleton. Verify menu location and dependencies
+        against the target NuttX Apps version before use.

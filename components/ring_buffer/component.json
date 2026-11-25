@@ -1,0 +1,31 @@
+{
+  "name": "ecl_ring_buffer",
+  "version": "1.0.0",
+  "language": "C",
+  "standard": "C99",
+  "status": "experimental",
+  "portability_class": "P0",
+  "thread_safety": "not-thread-safe",
+  "dynamic_allocation": "none",
+  "storage_ownership": "caller-owned",
+  "platforms_verified": [
+    {
+      "platform": "host-linux",
+      "compiler": "GCC (CMake default)",
+      "result": "build-and-unit-test-passed"
+    }
+  ],
+  "platforms_not_verified": [
+    "NuttX",
+    "FreeRTOS",
+    "Zephyr",
+    "MCU targets"
+  ],
+  "dependencies": [],
+  "known_limitations": [
+    "Not thread-safe",
+    "ISR safety not guaranteed",
+    "Caller must provide valid initialized object and storage",
+    "Read/write buffers must not overlap internal storage"
+  ]
+}

@@ -1,0 +1,15 @@
+/build/
+**/build/
+*.o
+*.a
+*.elf
+*.bin
+*.hex
+*.map
+*.gcda
+*.gcno
+__pycache__/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

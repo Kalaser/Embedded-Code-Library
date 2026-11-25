@@ -1,0 +1,16 @@
+{
+  "id": "example_component",
+  "name": "Example Component",
+  "category": "utility",
+  "language": "C",
+  "repository": "",
+  "status": "draft",
+  "license": "internal-pending",
+  "version_pin": "",
+  "portability_class": "P0",
+  "thread_safety": "not-thread-safe",
+  "dynamic_allocation": "none",
+  "platforms_verified": [],
+  "dependencies": [],
+  "notes": ""
+}
