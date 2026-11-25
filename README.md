@@ -1,169 +1,54 @@
-# Embedded Code Library
+# Embedded Framework Knowledge Base — docmd Website
 
-**版本：** 1.0.0  
-**定位：** 嵌入式 C/C++ 可复用代码、工程模板、第三方组件目录与工程知识库。
+基于 [docmd](https://github.com/docmd-io/docmd) 的静态技术知识库网站。本站只收录嵌入式平台、优秀框架、架构思想、可复用中间件、工程模板和上游源码参考。
 
-Embedded Code Library（ECL）用于沉淀可复用的嵌入式软件资产。它不是某一个 RTOS，也不是第三方代码的简单镜像，而是一个可审计、可移植、可测试、可持续维护的工程资产仓库。
+## 本地预览
 
-## 1. 设计目标
-
-- **可复用：** 将稳定、边界清楚的功能封装为独立组件。
-- **可移植：** 将硬件、RTOS、工具链和产品策略依赖放在明确的适配边界。
-- **可验证：** 每个组件都有接口契约、测试和已知限制。
-- **可追溯：** 第三方组件记录上游地址、版本、许可证和本地修改。
-- **可维护：** 统一目录、命名、版本、变更和废弃策略。
-
-## 2. 仓库边界
-
-本仓库分为四种资产：
-
-| 资产类型 | 目录 | 内容 | 纳入原则 |
-|---|---|---|---|
-| 自研组件 | `components/` | 可直接编译、测试的 C/C++ 模块 | 代码、测试、文档同时具备 |
-| 工程模板 | `templates/` | 新项目/新组件的起始结构 | 说明目标环境和未实现部分 |
-| 第三方目录 | `catalog/`、`third_party/` | 外部项目索引和集成记录 | 默认只登记上游，不复制源码 |
-| 工程知识 | `knowledge/`、`docs/` | 编码规范、POSIX、NuttX 和架构指南 | 标明来源、版本和适用边界 |
-
-**重要：** 第三方项目清单不等于已集成或已验证。没有 `vendor/` 源码、固定版本、许可证审核和构建测试的项目，只能标记为 `catalog-only`。
-
-## 3. 目录结构
-
-```text
-Embedded-Code-Library/
-├── README.md
-├── CATALOG.md
-├── CHANGELOG.md
-├── LICENSE_POLICY.md
-├── CMakeLists.txt
-├── catalog/
-│   └── components.json
-├── components/
-│   ├── common/
-│   │   └── include/ecl_status.h
-│   └── ring_buffer/
-│       ├── include/ecl_ring_buffer.h
-│       ├── src/ecl_ring_buffer.c
-│       ├── tests/test_ring_buffer.c
-│       ├── CMakeLists.txt
-│       └── README.md
-├── templates/
-│   ├── c-component-template/
-│   ├── firmware-app-template/
-│   ├── nuttx-app-template/
-│   └── host-cmake-test-template/
-├── docs/
-│   ├── ARCHITECTURE.md
-│   ├── COMPONENT_CONTRACT.md
-│   ├── THIRD_PARTY_INTEGRATION.md
-│   ├── PORTABILITY_MATRIX.md
-│   ├── VERSIONING_AND_RELEASE.md
-│   ├── FACTORY_FRAMEWORK_MAPPING.md
-│   └── CONTRIBUTING.md
-├── third_party/
-│   ├── README.md
-│   └── notices/README.md
-├── knowledge/
-│   ├── README.md
-│   ├── skills/embedded-c-engineering/
-│   ├── skills/posix-system-programming/
-│   └── references/nuttx_api.md
-├── examples/
-│   └── ring_buffer_demo.c
-└── tools/
-    ├── validate_library.py
-    └── new_component.py
-```
-
-## 4. 快速开始
-
-### 4.1 构建并运行自研组件测试
-
-依赖：CMake 3.16+、支持 C99 的 C 编译器（GCC、Clang 或对应工具链）。
+要求：Node.js 20+、npm。首次执行时，npx 会下载固定版本的 `@docmd/core@0.9.8`。
 
 ```bash
-cmake -S . -B build -DECL_BUILD_TESTS=ON
-cmake --build build
-ctest --test-dir build --output-on-failure
+npm run dev
 ```
 
-Windows PowerShell 同样可以执行上述命令；需要将 CMake 和编译器加入 PATH。
+打开 `http://127.0.0.1:3000`。
 
-### 4.2 检查仓库结构和组件目录
+## 验证与构建
 
 ```bash
-python tools/validate_library.py
+npm run check:site
+npm run validate
+npm run build
 ```
 
-该脚本检查仓库必需目录、组件清单 JSON 和已登记组件的基本元数据，不执行网络检查，也不代表许可证合规审计。
+生成目录：`site/`。docmd 是静态站点生成器，构建产物可部署到 GitHub Pages 或其他静态托管平台。
 
-### 4.3 创建新组件骨架
+## 内容维护
 
-```bash
-python tools/new_component.py device_registry --language c --description "Device registry abstraction"
-```
+- `kb-docs/zh/`：站点实际发布的 Markdown 内容源，可以直接编辑。
+- `assets/css/`：站点样式。
+- `assets/downloads/`：完整知识库及多平台工程模板下载包。
+- `docmd.config.json`：站点元数据、导航、语言和 Pages 子路径配置。
+- `.github/workflows/docs.yml`：构建、链接验证和 GitHub Pages 部署。
 
-命令会在 `components/` 下创建接口、实现、测试占位和 README。生成的代码只是骨架，不能视为已实现功能。
+更新知识库内容时，先修改 `kb-docs/zh/` 对应页面；如同时更新可下载的完整资料包，也需重新生成 ZIP/tar.gz 并同步更新版本号和下载链接。
 
-## 5. 组件状态
+## GitHub Pages
 
-所有资产应使用以下状态之一：
+本项目仓库 `Kalaser/kalaser_docmd` 的预期项目站点地址：
 
-- `draft`：开发中，接口或实现尚未稳定。
-- `experimental`：可试用，尚未完成生产级验证。
-- `validated`：已完成规定范围内的构建和测试；必须附验证环境。
-- `production`：已在明确产品/平台中采用，并经过项目批准。
-- `deprecated`：不再推荐使用，须注明替代方案和移除计划。
-- `catalog-only`：仅作为上游项目索引，未复制或验证。
+`https://kalaser.github.io/kalaser_docmd/`
 
-禁止仅因 GitHub 仓库流行或存在示例，就将组件标记为 `validated` 或 `production`。
+推送到 `main` 后，GitHub Actions 会运行 docmd 链接校验与构建；成功后部署到 GitHub Pages。
 
-## 6. 推荐阅读顺序
+首次启用时，在仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。
 
-1. `docs/ARCHITECTURE.md`：理解资产分类及依赖方向。
-2. `docs/COMPONENT_CONTRACT.md`：理解组件接口、所有权和错误语义。
-3. `CATALOG.md`：选择可复用的上游项目。
-4. `docs/THIRD_PARTY_INTEGRATION.md`：完成许可证和版本接入流程。
-5. `components/ring_buffer/`：查看首个自研组件的完整示例。
-6. `knowledge/`：查阅 C 编码、POSIX 和 NuttX 参考资料。
+> 注意：当前目标仓库是 Private。GitHub Pages 能否从私有仓库发布，取决于仓库所有者的 GitHub 计划。若为 GitHub Free，仓库需设为 Public；公开前必须检查仓库是否含有不应公开的内容。GitHub Pages 发布的网站默认可能对互联网公开，即使源仓库为 Private，也必须单独核对站点可见性设置。
 
-## 7. 针对 Factory Framework 的使用建议
+## 目录结构
 
-建议按以下边界复用本仓库资产：
+- `kb-docs/zh/`：中文文档源，按平台、架构、组件、模板及参考项目分组。
+- `assets/css/`：自定义 CSS。
+- `assets/downloads/`：完整知识库和模板 ZIP / tar.gz 归档。
+- `.github/workflows/docs.yml`：GitHub Actions 自动化发布。
 
-```text
-Factory Application
-    ├── Test Manager / Test Modules
-    ├── Device Manager
-    ├── Session Manager
-    ├── Protocol / Command Dispatcher
-    └── Transport Manager
-             |
-       Framework Services
-    ├── Event / State Machine
-    ├── Logging / Configuration
-    ├── Buffer / Queue / Memory Pool
-    └── OSAL
-             |
-       Platform Adapters
-    ├── NuttX
-    ├── Linux Host
-    └── Other RTOS
-```
-
-此图是建议的逻辑分层，不表示仓库已经提供所有模块。首版实际提供的自研组件以 `components/` 为准。
-
-## 8. 外部项目与许可证
-
-上游仓库只作为参考和集成候选。导入任何源代码前必须：
-
-1. 固定 tag 或 commit SHA，禁止生产构建直接跟踪 `main`/`master`。
-2. 保存上游 `LICENSE`、`NOTICE`、版权声明和 SPDX 标识。
-3. 检查子目录、示例、BSP、二进制和子模块是否采用不同许可证。
-4. 记录本地补丁和来源文件。
-5. 完成公司/产品要求的开源许可证审查。
-
-参见 `LICENSE_POLICY.md` 与 `docs/THIRD_PARTY_INTEGRATION.md`。
-
-## 9. 当前版本的边界
-
-v1.0.0 是代码库脚手架，不是完整的生产级固件框架。首版包含一个静态内存、非线程安全的 Ring Buffer 组件和若干工程模板。其它框架及协议组件先登记在目录，后续应按产品需求逐个引入、适配与验证。
+原仓库中的 `docs/` 目录暂时保留，但不作为本站内容源。

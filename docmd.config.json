@@ -1,0 +1,298 @@
+{
+  "title": "Embedded Framework Knowledge Base",
+  "url": "https://kalaser.github.io/kalaser_docmd",
+  "base": "/kalaser_docmd/",
+  "src": "kb-docs",
+  "out": "site",
+  "i18n": {
+    "default": "zh",
+    "locales": [
+      {
+        "id": "zh",
+        "label": "简体中文"
+      }
+    ]
+  },
+  "theme": {
+    "name": "default",
+    "customCss": [
+      "/assets/css/knowledge-base.css"
+    ]
+  },
+  "navigation": [
+    {
+      "title": "首页",
+      "path": "/",
+      "icon": "home"
+    },
+    {
+      "title": "总览与选型",
+      "icon": "book",
+      "collapsible": true,
+      "children": [
+        {
+          "title": "平台选型矩阵",
+          "path": "/00-overview/PLATFORM_SELECTION"
+        },
+        {
+          "title": "架构知识地图",
+          "path": "/00-overview/ARCHITECTURE_MAP"
+        },
+        {
+          "title": "术语表",
+          "path": "/00-overview/GLOSSARY"
+        }
+      ]
+    },
+    {
+      "title": "平台与工程框架",
+      "icon": "cpu",
+      "collapsible": true,
+      "children": [
+        {
+          "title": "平台总览",
+          "path": "/01-platforms"
+        },
+        {
+          "title": "Cortex-M 裸机",
+          "path": "/01-platforms/BAREMETAL_CORTEX_M"
+        },
+        {
+          "title": "STM32Cube",
+          "path": "/01-platforms/STM32CUBE"
+        },
+        {
+          "title": "FreeRTOS",
+          "path": "/01-platforms/FREERTOS"
+        },
+        {
+          "title": "Zephyr",
+          "path": "/01-platforms/ZEPHYR"
+        },
+        {
+          "title": "Apache NuttX",
+          "path": "/01-platforms/NUTTX"
+        },
+        {
+          "title": "RT-Thread",
+          "path": "/01-platforms/RT_THREAD"
+        },
+        {
+          "title": "ESP-IDF",
+          "path": "/01-platforms/ESP_IDF"
+        },
+        {
+          "title": "Raspberry Pi Pico SDK",
+          "path": "/01-platforms/PICO_SDK"
+        },
+        {
+          "title": "Buildroot",
+          "path": "/01-platforms/BUILDROOT"
+        },
+        {
+          "title": "Yocto Project",
+          "path": "/01-platforms/YOCTO"
+        }
+      ]
+    },
+    {
+      "title": "架构设计思想",
+      "icon": "code",
+      "collapsible": true,
+      "children": [
+        {
+          "title": "架构模式总览",
+          "path": "/02-architecture"
+        },
+        {
+          "title": "分层固件架构",
+          "path": "/02-architecture/LAYERED_FIRMWARE"
+        },
+        {
+          "title": "BSP / HAL / Driver",
+          "path": "/02-architecture/BSP_HAL_DRIVER"
+        },
+        {
+          "title": "构建系统与配置",
+          "path": "/02-architecture/BUILD_SYSTEMS_AND_CONFIGURATION"
+        },
+        {
+          "title": "组件化与依赖管理",
+          "path": "/02-architecture/COMPONENT_MODEL"
+        },
+        {
+          "title": "事件驱动与状态机",
+          "path": "/02-architecture/EVENT_DRIVEN_STATE_MACHINE"
+        },
+        {
+          "title": "设备与会话管理",
+          "path": "/02-architecture/DEVICE_SESSION_MANAGEMENT"
+        },
+        {
+          "title": "Transport 抽象",
+          "path": "/02-architecture/TRANSPORT_ABSTRACTION"
+        },
+        {
+          "title": "并发与资源预算",
+          "path": "/02-architecture/CONCURRENCY_RESOURCE_BUDGET"
+        },
+        {
+          "title": "Bootloader / OTA / Recovery",
+          "path": "/02-architecture/BOOT_UPDATE_RECOVERY"
+        },
+        {
+          "title": "应用架构配方",
+          "path": "/02-architecture/APPLICATION_RECIPES"
+        }
+      ]
+    },
+    {
+      "title": "可复用组件与中间件",
+      "icon": "settings",
+      "collapsible": true,
+      "children": [
+        {
+          "title": "组件目录总览",
+          "path": "/03-components"
+        },
+        {
+          "title": "TinyUSB",
+          "path": "/03-components/TINYUSB"
+        },
+        {
+          "title": "lwIP",
+          "path": "/03-components/LWIP"
+        },
+        {
+          "title": "Nanopb",
+          "path": "/03-components/NANOPB"
+        },
+        {
+          "title": "LittleFS",
+          "path": "/03-components/LITTLEFS"
+        },
+        {
+          "title": "LVGL",
+          "path": "/03-components/LVGL"
+        },
+        {
+          "title": "ETL",
+          "path": "/03-components/ETL"
+        },
+        {
+          "title": "MCUboot",
+          "path": "/03-components/MCUBOOT"
+        },
+        {
+          "title": "Unity / Ceedling",
+          "path": "/03-components/UNITY_CEEDLING"
+        },
+        {
+          "title": "CMSIS",
+          "path": "/03-components/CMSIS"
+        }
+      ]
+    },
+    {
+      "title": "多平台工程模板",
+      "icon": "code",
+      "collapsible": true,
+      "children": [
+        {
+          "title": "模板总览",
+          "path": "/04-templates"
+        },
+        {
+          "title": "通用 CMake 组件",
+          "path": "/04-templates/portable-c-component"
+        },
+        {
+          "title": "Cortex-M 裸机应用",
+          "path": "/04-templates/baremetal-cortex-m"
+        },
+        {
+          "title": "STM32Cube 应用",
+          "path": "/04-templates/stm32cube-application"
+        },
+        {
+          "title": "FreeRTOS 应用",
+          "path": "/04-templates/freertos-application"
+        },
+        {
+          "title": "Zephyr 应用",
+          "path": "/04-templates/zephyr-application"
+        },
+        {
+          "title": "NuttX 应用",
+          "path": "/04-templates/nuttx-application"
+        },
+        {
+          "title": "RT-Thread 应用",
+          "path": "/04-templates/rt-thread-application"
+        },
+        {
+          "title": "ESP-IDF 项目",
+          "path": "/04-templates/esp-idf-project"
+        },
+        {
+          "title": "Pico SDK 项目",
+          "path": "/04-templates/pico-sdk-project"
+        },
+        {
+          "title": "Buildroot External Tree",
+          "path": "/04-templates/buildroot-external"
+        },
+        {
+          "title": "Yocto Layer",
+          "path": "/04-templates/yocto-layer"
+        },
+        {
+          "title": "嵌入式 Linux CMake",
+          "path": "/04-templates/embedded-linux-cmake"
+        }
+      ]
+    },
+    {
+      "title": "优秀项目源码阅读",
+      "icon": "search",
+      "collapsible": true,
+      "children": [
+        {
+          "title": "源码阅读路线",
+          "path": "/05-reference-projects/READING_ROUTES"
+        },
+        {
+          "title": "仓库评审清单",
+          "path": "/05-reference-projects/REPOSITORY_REVIEW_CHECKLIST"
+        }
+      ]
+    },
+    {
+      "title": "项目目录与版本资料",
+      "icon": "settings",
+      "collapsible": true,
+      "children": [
+        {
+          "title": "开源项目目录",
+          "path": "/CATALOG"
+        },
+        {
+          "title": "上游版本状态",
+          "path": "/UPSTREAM_STATUS"
+        },
+        {
+          "title": "来源与许可证",
+          "path": "/SOURCES_AND_LICENSES"
+        },
+        {
+          "title": "知识库范围",
+          "path": "/KNOWLEDGE_BASE_SCOPE"
+        },
+        {
+          "title": "版本变更记录",
+          "path": "/CHANGELOG"
+        }
+      ]
+    }
+  ]
+}

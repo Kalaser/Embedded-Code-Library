@@ -1,0 +1,186 @@
+[
+  {
+    "name": "Apache NuttX",
+    "category": "RTOS",
+    "repo": "https://github.com/apache/nuttx",
+    "docs": "https://nuttx.apache.org/docs/latest/",
+    "what_to_study": "POSIX-style API, device filesystem, board/arch split, apps separation",
+    "license_note": "Apache-2.0 project; verify bundled third-party components separately"
+  },
+  {
+    "name": "NuttX Apps",
+    "category": "Applications",
+    "repo": "https://github.com/apache/nuttx-apps",
+    "docs": "https://nuttx.apache.org/docs/latest/applications/index.html",
+    "what_to_study": "Application Make.defs/Makefile/Kconfig, examples, system services",
+    "license_note": "Apache-2.0 repository; verify subcomponents"
+  },
+  {
+    "name": "Zephyr",
+    "category": "RTOS/platform",
+    "repo": "https://github.com/zephyrproject-rtos/zephyr",
+    "docs": "https://docs.zephyrproject.org/latest/",
+    "what_to_study": "Device model, Devicetree, Kconfig, west workspace, samples",
+    "license_note": "Apache-2.0; check imported modules and west projects"
+  },
+  {
+    "name": "FreeRTOS Kernel",
+    "category": "RTOS kernel",
+    "repo": "https://github.com/FreeRTOS/FreeRTOS-Kernel",
+    "docs": "https://www.freertos.org/Documentation/02-Kernel/00-Overview",
+    "what_to_study": "Scheduler, queue, task notifications, timers, port layer",
+    "license_note": "MIT; check distribution/demo libraries independently"
+  },
+  {
+    "name": "FreeRTOS Distribution",
+    "category": "RTOS examples",
+    "repo": "https://github.com/FreeRTOS/FreeRTOS",
+    "docs": "https://www.freertos.org/",
+    "what_to_study": "Preconfigured demos, supplementary libraries, platform projects",
+    "license_note": "Contains submodules and partner libraries; audit each dependency"
+  },
+  {
+    "name": "RT-Thread",
+    "category": "RTOS/platform",
+    "repo": "https://github.com/RT-Thread/rt-thread",
+    "docs": "https://www.rt-thread.io/document/site/",
+    "what_to_study": "BSP, components, FinSH, device framework, package architecture",
+    "license_note": "Check repository and each software package license"
+  },
+  {
+    "name": "ESP-IDF",
+    "category": "Vendor SDK",
+    "repo": "https://github.com/espressif/esp-idf",
+    "docs": "https://docs.espressif.com/projects/esp-idf/en/stable/",
+    "what_to_study": "Component build system, Kconfig, sdkconfig, managed components",
+    "license_note": "Apache-2.0 main framework; audit bundled/managed components"
+  },
+  {
+    "name": "STM32Cube MCU Packages",
+    "category": "Vendor SDK",
+    "repo": "https://github.com/STMicroelectronics/STM32Cube_MCU_Overall_Offer",
+    "docs": "https://www.st.com/en/embedded-software/stm32cube-mcu-mpu-packages.html",
+    "what_to_study": "CMSIS, HAL/LL, BSP, middleware and board projects",
+    "license_note": "Package/component-specific licenses and notices must be reviewed"
+  },
+  {
+    "name": "Raspberry Pi Pico SDK",
+    "category": "MCU SDK",
+    "repo": "https://github.com/raspberrypi/pico-sdk",
+    "docs": "https://www.raspberrypi.com/documentation/microcontrollers/c_sdk.html",
+    "what_to_study": "CMake integration, hardware APIs, PIO, multicore",
+    "license_note": "Review SDK and bundled submodules individually"
+  },
+  {
+    "name": "TinyUSB",
+    "category": "USB middleware",
+    "repo": "https://github.com/hathach/tinyusb",
+    "docs": "https://docs.tinyusb.org/en/stable/",
+    "what_to_study": "Class drivers, DCD/HCD, OSAL, examples/BSP separation",
+    "license_note": "MIT; audit bundled third-party libraries"
+  },
+  {
+    "name": "lwIP",
+    "category": "TCP/IP middleware",
+    "repo": "https://github.com/lwip-tcpip/lwip",
+    "docs": "https://www.nongnu.org/lwip/2_2_x/",
+    "what_to_study": "pbuf, netif, Raw/Netconn/Socket APIs, ports",
+    "license_note": "BSD-style license; preserve copyright/license notices"
+  },
+  {
+    "name": "Nanopb",
+    "category": "Serialization",
+    "repo": "https://github.com/nanopb/nanopb",
+    "docs": "https://jpa.kapsi.fi/nanopb/docs/",
+    "what_to_study": "Proto generation, bounded fields, C encode/decode runtime",
+    "license_note": "zlib-style license; verify generator/runtime version"
+  },
+  {
+    "name": "LittleFS",
+    "category": "Filesystem",
+    "repo": "https://github.com/littlefs-project/littlefs",
+    "docs": "https://github.com/littlefs-project/littlefs/blob/master/DESIGN.md",
+    "what_to_study": "Block device adapter, COW, metadata pair, wear leveling",
+    "license_note": "BSD-3-Clause; confirm exact release notice"
+  },
+  {
+    "name": "LVGL",
+    "category": "GUI",
+    "repo": "https://github.com/lvgl/lvgl",
+    "docs": "https://lvgl.io/docs/",
+    "what_to_study": "Display/input port, tick, OSAL, widget/event/style system",
+    "license_note": "Core license and Pro offerings are distinct; check exact product"
+  },
+  {
+    "name": "ETL",
+    "category": "C++ embedded library",
+    "repo": "https://github.com/ETLCPP/etl",
+    "docs": "https://www.etlcpp.com/",
+    "what_to_study": "Fixed-capacity containers, FSM, message routing, no-heap patterns",
+    "license_note": "MIT; check version and profile configuration"
+  },
+  {
+    "name": "MCUboot",
+    "category": "Bootloader",
+    "repo": "https://github.com/mcu-tools/mcuboot",
+    "docs": "https://docs.mcuboot.com/",
+    "what_to_study": "bootutil split, image format, slots, swap/revert/recovery",
+    "license_note": "Apache-2.0; audit crypto backends and platform integrations"
+  },
+  {
+    "name": "Unity",
+    "category": "Testing",
+    "repo": "https://github.com/ThrowTheSwitch/Unity",
+    "docs": "https://www.throwtheswitch.org/unity",
+    "what_to_study": "C test assertions and host/target unit tests",
+    "license_note": "MIT; verify exact repository license"
+  },
+  {
+    "name": "Ceedling",
+    "category": "Testing/build",
+    "repo": "https://github.com/ThrowTheSwitch/Ceedling",
+    "docs": "https://www.throwtheswitch.org/ceedling",
+    "what_to_study": "C unit-test build, mocks, test organization",
+    "license_note": "MIT; check Ruby gem dependencies"
+  },
+  {
+    "name": "CMSIS",
+    "category": "Arm ecosystem",
+    "repo": "https://github.com/ARM-software/CMSIS_6",
+    "docs": "https://arm-software.github.io/CMSIS_6/latest/",
+    "what_to_study": "Core/Device/DSP/RTOS API/Pack responsibilities",
+    "license_note": "Subproject-specific files and notices apply"
+  },
+  {
+    "name": "Buildroot",
+    "category": "Embedded Linux build",
+    "repo": "https://github.com/buildroot/buildroot",
+    "docs": "https://buildroot.org/downloads/manual/manual.html",
+    "what_to_study": "defconfig, package recipes, BR2_EXTERNAL, rootfs",
+    "license_note": "Buildroot project and each package have separate license obligations"
+  },
+  {
+    "name": "Yocto Project / Poky",
+    "category": "Embedded Linux build",
+    "repo": "https://git.yoctoproject.org/poky/",
+    "docs": "https://docs.yoctoproject.org/",
+    "what_to_study": "Layers, recipes, machine/distro/image, BitBake tasks",
+    "license_note": "Metadata and built packages have individual license obligations"
+  },
+  {
+    "name": "libopencm3",
+    "category": "Bare-metal library",
+    "repo": "https://github.com/libopencm3/libopencm3",
+    "docs": "https://libopencm3.org/",
+    "what_to_study": "Peripheral library organization and MCU family support",
+    "license_note": "Check repository license and any vendor-derived files"
+  },
+  {
+    "name": "PlatformIO Examples",
+    "category": "Project examples",
+    "repo": "https://github.com/platformio/platformio-examples",
+    "docs": "https://docs.platformio.org/",
+    "what_to_study": "Multi-platform project config, library dependencies and environments",
+    "license_note": "Each example and dependency may have its own license"
+  }
+]
